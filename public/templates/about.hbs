@@ -1,0 +1,21 @@
+<h1>About Dracula</h1>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<button class="btn btn-primary" {{action 'showRealName'}}>Click here to learn Dracula's real name!</button>
+
+{{#if isPictureShowing}}
+<button class='btn btn-info' {{action 'hidePicture'}}>Hide Picture</button>
+<p>
+  <img src="http://upload.wikimedia.org/wikipedia/commons/2/25/Dracula_1958_c.jpg" alt="A photo of dracula">
+</p>
+{{else}}
+  <button class='btn btn-info' {{action 'showPicture'}}>Click here to see a picture of Dracula</button>
+{{/if}}

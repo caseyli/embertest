@@ -1,0 +1,17 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: embertest_development
+test:
+  <<: *default
+  database: embertest_test
+production:
+  <<: *default
+  database: embertest_production
+  username: embertest
+  password: <%= ENV['EMBERTEST_DATABASE_PASSWORD'] %>
